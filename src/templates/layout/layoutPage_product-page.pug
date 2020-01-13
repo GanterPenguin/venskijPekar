@@ -1,0 +1,32 @@
+extends layout.pug
+
+block layoutPage
+
+    include header.pug
+
+    main.main
+
+        .page.page_product-page
+
+            a(href="#").main__back.main__back_product-page
+                i.material-icons-round.md-arrow_back_ios.main__back-icon
+
+            .path
+
+                ul.path__wrapper
+
+                    li.path__item
+
+                        a(href="index.html").path__link Главная
+
+                    li.path__item
+
+                        a(href="press-center.html").path__link Раздел
+
+                    li.path__item
+
+                        a(href="press-center.html").path__link Подраздел
+
+            block content
+
+    include footer.pug

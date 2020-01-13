@@ -1,0 +1,54 @@
+@use '../utils/vars' as global;
+
+.html {
+    height: 100%;
+    
+    background-color: #fafafa;
+}
+
+.html,
+.body {
+    width: 100%;
+    min-height: 100%;
+
+    //background-color: #f5f5f5;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+
+    font-family: global.$font-default;
+    color: global.$color-text;
+}
+
+.section {
+    margin-bottom: 60px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &:-moz-focus-inner {
+        border: 0;
+    }
+}
+

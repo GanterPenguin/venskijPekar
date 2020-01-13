@@ -1,0 +1,73 @@
+extends layout.pug
+
+block layoutPage
+
+    include header.pug
+
+    main.main
+
+        .header-category
+
+            .header-category__overlay
+
+                ul.header-category__wrapper
+
+                    li.header-category__card
+
+                        a(href="/catalog.html").header-category__link
+
+                            .header-category__title Десерты
+
+                            .header-category__image(style="background-image: url(/images/categories/category-1.jpg)")
+
+                    li.header-category__card
+
+                        a(href="/catalog.html").header-category__link
+
+                            .header-category__title Конфеты
+
+                            .header-category__image(style="background-image: url(/images/categories/category-2.jpg)")
+
+                    li.header-category__card
+
+                        a(href="/catalog.html").header-category__link
+
+                            .header-category__title Выпечка
+
+                            .header-category__image(style="background-image: url(/images/categories/category-3.jpg)")
+
+                    li.header-category__card
+
+                        a(href="/catalog.html").header-category__link
+
+                            .header-category__title Пироги
+
+                            .header-category__image(style="background-image: url(/images/categories/category-4.png)")
+
+                    li.header-category__card
+
+                        a(href="/catalog.html").header-category__link
+
+                            .header-category__title Блюда по меню
+
+                            .header-category__image(style="background-image: url(/images/categories/category-5.jpg)")
+
+                    li.header-category__card
+
+                        a(href="/catalog.html").header-category__link
+
+                            .header-category__title Кулинария
+
+                            .header-category__image(style="background-image: url(/images/categories/category-6.jpg)")
+
+                    li.header-category__card
+
+                        a(href="/catalog.html").header-category__link
+
+                            .header-category__title Упаковка/декор
+
+                            .header-category__image(style="background-image: url(/images/categories/category-7.jpg)")
+
+        block content
+
+    include footer.pug

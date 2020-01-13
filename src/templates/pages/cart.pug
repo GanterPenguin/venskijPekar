@@ -1,0 +1,190 @@
+extends ../layout/layoutPage_cart.pug
+
+block content
+
+    article.cart
+
+        .cart__toolbar
+
+            h1.title.title_h1.title_no-line.title_no-margin Корзина
+
+        .cart__wrapper
+
+            .cart-grid
+
+                .cart-grid__head
+
+                    .cart-grid__item-elem.cart-grid__head-title Фото:
+
+                    .cart-grid__item-elem.cart-grid__head-title Товар:
+
+                    .cart-grid__item-elem.cart-grid__head-title Цена:
+
+                    .cart-grid__item-elem.cart-grid__head-title Количество:
+
+                    .cart-grid__item-elem.cart-grid__head-title Сумма:
+
+                    .cart-grid__item-elem.cart-grid__head-title Действия:
+
+                - for (let x = 0; x < 3; x++)
+
+                    .cart-grid__item
+
+                        a(href="/images/product.png").cart-grid__item-elem.cart-grid__item-image
+                            img.product-page-item__thumb(src="/images/product.png")
+
+                        .cart-grid__item-elem.cart-grid__item-props
+
+                            .cart-grid__item-title «Черничное наслаждение» 880 гр
+
+                        .cart-grid__item-elem.cart-grid__item-price
+
+                            .cart-grid__price-current
+
+                                span.cart-grid__price-cost 999
+
+                                span.cart-grid__price-value ₽
+
+                        .cart-grid__item-elem.cart-grid__item-count 
+
+                            .counter.counter_w-100
+
+                                input.counter__input(type="text" readonly="true")
+
+                                ul.counter__options
+
+                                    li.counter__options-item 
+
+                                        span.counter__options-number 1
+
+                                    li.counter__options-item 
+
+                                        span.counter__options-number 2
+
+                                    li.counter__options-item 
+
+                                        span.counter__options-number 3
+
+                                    li.counter__options-item 
+
+                                        span.counter__options-number 4
+
+                                    li.counter__options-item 
+
+                                        span.counter__options-number 5
+
+                                    li.counter__options-item 
+
+                                        span.counter__options-number 6
+
+                                    li.counter__options-item 
+
+                                        span.counter__options-number 7
+
+                                    li.counter__options-item 
+
+                                        span.counter__options-number 8
+
+                                    li.counter__options-item 
+
+                                        span.counter__options-number 9
+
+                                    li.counter__options-item.counter__options-item_arbitary
+
+                                        span.counter__options-number 10+
+
+                                i.material-icons-round.md-keyboard_arrow_down.counter__arrow
+
+                        .cart-grid__item-elem.cart-grid__item-sum
+
+                            .cart-grid__price-current 
+
+                                span.cart-grid__price-cost 999
+
+                                span.cart-grid__price-value ₽
+
+                        .cart-grid__item-elem.cart-grid__item-actions
+
+                            i.material-icons-round.md-close
+
+        .cart-bottom 
+
+            .cart-bottom__promo
+
+                .cart-bottom__promo-title У вас есть промокод?
+
+                .cart-bottom__promo-code
+
+                    input(type="select").cart-bottom__promo-input
+
+                    button.cart-bottom__promo-submit Применить
+
+                .cart-bottom__promo-status Активирован промокод - 10% на все товары
+
+                .cart-bottom__payment
+
+                    .cart-bottom__payment-title Способ оплаты
+
+                    .cart-bottom__payment-wrapper
+
+                        label.cart-bottom__payment-label
+                            <input class="with-gap" name="group1" type="radio"  />
+                            <span>Банковской картой</span>
+                        
+
+                        label.cart-bottom__payment-label
+                            <input class="with-gap" name="group1" type="radio"/>
+                            <span>Наличными при получении</span>
+                        </label>
+
+            .cart-bottom__order
+
+                .material-input.material-input_required(id="material-input-name")
+                    input(id="name" type="text" required name="name")
+                    label(for="name") Ваше имя
+
+                .material-input.material-input_required(id="material-input-email")
+                    input(id="email" type="text" required name="email")
+                    label(for="email") E-mail
+
+                .material-input.material-input_required(id="material-input-phone")
+                    input(id="phone" type="text" required name="phone")
+                    label(for="phone") Телефон
+
+                .material-input(id="material-input-delivery")
+                    input(id="delivery" type="text" name="delivery" readonly)
+                    label(for="delivery") Дата доставки
+
+                .material-textarea(id="material-textarea")
+                    textarea(id="message" rows="1" name="question")
+                    label(for="message") Комментарии к заказу
+
+            .cart-bottom__total
+
+                .cart-bottom__total-wrapper
+
+                    .cart-bottom__total-row
+
+                        .cart-bottom__total-title Итого товаров на сумму: 
+
+                        .cart-bottom__total-value 999
+                            span &nbsp; ₽
+
+                    .cart-bottom__total-row
+
+                        .cart-bottom__total-title Доставка:   
+
+                        .cart-bottom__total-value Бесплатно
+
+                .cart-bottom__total-sum
+
+                    span.cart-bottom__total-title.cart-bottom__total-title_strong Итого:
+
+                    span.cart-bottom__total-value.cart-bottom__total-value_strong 999
+
+                    span.cart-bottom__total-currency ₽
+
+                a(href="/order.html").btn.btn_submit.cart__btn-submit.waves-effect.waves-light Оформить
+
+block append scripts
+    script(src='./js/cart.js?' + date)

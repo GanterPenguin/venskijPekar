@@ -1,0 +1,276 @@
+extends ../layout/layoutPage_c-noP.pug
+
+block content
+
+    .home
+
+        section.section.home-swiper
+
+            .home-swiper__prev
+                i.material-icons-round.md-arrow_back_ios
+
+            .home-swiper__next
+                i.material-icons-round.md-arrow_forward_ios
+
+            .home-swiper__pagination
+
+            .home-swiper__wrapper
+
+                .home-swiper__slide
+                    img(src="/images/slider/slide02.jpg" width="100%")
+
+                    .home-swiper__slide-wrapper
+
+                        .home-swiper__slide-title Свежая выпечка
+
+                        .home-swiper__slide-description Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Оксмокс, залетают. Сих большой города своих ее, алфавит о наш.
+
+                        a(href="#").home-swiper__slide-btn.waves-effect.waves-light Перейти
+
+
+                .home-swiper__slide
+                    img(src="/images/slider/slide01.jpg" width="100%")
+
+                    .home-swiper__slide-wrapper
+
+                        .home-swiper__slide-title Детские мастер классы
+
+                        .home-swiper__slide-description Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Оксмокс, залетают. Сих большой города своих ее, алфавит о наш.
+
+                        a(href="#").home-swiper__slide-btn.waves-effect.waves-light Перейти
+
+                .home-swiper__slide
+                    img(src="/images/slider/slide03.jpg" width="100%")
+
+                    .home-swiper__slide-wrapper
+
+                        .home-swiper__slide-title Изготовление тортов
+
+                        .home-swiper__slide-description Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Оксмокс, залетают. Сих большой города своих ее, алфавит о наш.
+
+                        a(href="#").home-swiper__slide-btn.waves-effect.waves-light Перейти
+
+                    
+        .home__wrapper
+
+            section.section.home-main
+
+                h1.title.title_h1 Венский пекарь
+
+                .description.description_center.
+                    Современная пекарня, где с раннего утра, каждый день,
+                    без праздников и выходных, пекутся пироги и делаются
+                    красивые и вкусные торты. Весь ассортимент делается вручную
+                    по уникальным рецептам.
+
+            section.section.home-stoks
+
+                .home-stoks__wrapper
+
+                    a(href="#").home-stoks__card
+
+                        .home-stoks__card-overlay
+
+                            img.home-stoks__card-image(src="/images/stock.png")
+
+                        .home-stoks__card-title Мясной вторник
+
+                    a(href="#").home-stoks__card
+
+                        .home-stoks__card-overlay
+
+                            img.home-stoks__card-image(src="/images/stock1.jpg")
+
+                        .home-stoks__card-title Сладкая среда
+
+                    a(href="#").home-stoks__card
+
+                        .home-stoks__card-overlay
+
+                            img.home-stoks__card-image(src="/images/stock2.jpg")
+
+                        .home-stoks__card-title Рыбный четверг
+
+            section.section.product
+
+                h2.title.title_h2 Хиты продаж
+        
+                .product-swiper
+
+                    .product-swiper__prev.waves-effect.waves-light
+            
+                        i.material-icons-round.md-arrow_back_ios
+                    
+                    .product-swiper__next.waves-effect.waves-light
+
+                        i.material-icons-round.md-arrow_forward_ios
+
+                    .product-swiper__pagination
+
+                    .product-swiper__overlay
+
+                        .product-swiper__wrapper
+
+                            - for (let x = 0; x < 6; x++)
+
+                                .product-swiper__slide
+
+                                    figure.card-product
+
+                                        .card-product__favorite.card-product__favorite_active
+                                            .card-product__favorite-wrapper
+                                                i.material-icons-twotone.md-favorite
+                                        
+                                        a(href="./product-page.html").card-product__overlay.waves-effect.waves-light
+                                            img.card-product__image(src="/images/product.png" width="100%")
+
+                                        .card-product__content
+
+                                            .card-product__wrapper
+
+                                                a(href="./product-page.html").card-product__title «Черничное наслаждение» 880 гр
+
+                                                .card-product__tags
+
+                                                    .card-product__tag.card-product__tag_new Новинка
+
+                                                    .card-product__tag.card-product__tag_hit Хит продаж
+
+                                            .card-product__footer
+
+                                                .card-product__price 990₽
+
+                                                button.card-product__btn-cart.waves-effect.waves-light В корзину
+
+                                .product-swiper__slide
+
+                                    figure.card-product
+
+                                        .card-product__favorite
+                                            .card-product__favorite-wrapper
+                                                i.material-icons-twotone.md-favorite
+                                        
+                                        a(href="./product-page.html").card-product__overlay.waves-effect.waves-light
+                                            img.card-product__image(src="/images/product.png" width="100%")
+
+                                        .card-product__content
+
+                                            .card-product__wrapper
+
+                                                a(href="./product-page.html").card-product__title «Черничное наслаждение» 880 гр
+
+                                                .card-product__tags
+
+                                                    .card-product__tag.card-product__tag_new Новинка
+
+                                            .card-product__footer
+
+                                                .card-product__price 990₽
+
+                                                button.card-product__btn-cart.waves-effect.waves-light В корзину
+
+                                .product-swiper__slide
+
+                                    figure.card-product
+
+                                        .card-product__favorite.card-product__favorite_active
+                                            .card-product__favorite-wrapper
+                                                i.material-icons-twotone.md-favorite
+                                        
+                                        a(href="./product-page.html").card-product__overlay.waves-effect.waves-light
+                                            img.card-product__image(src="/images/product.png" width="100%")
+
+                                        .card-product__content
+
+                                            .card-product__wrapper
+
+                                                a(href="./product-page.html").card-product__title «Черничное наслаждение» 880 гр
+
+                                                .card-product__tags
+
+                                                    .card-product__tag.card-product__tag_hit Хит продаж
+
+                                            .card-product__footer
+
+                                                .card-product__price 990₽
+
+                                                button.card-product__btn-cart.waves-effect.waves-light В корзину
+
+                                .product-swiper__slide
+
+                                    figure.card-product
+
+                                        .card-product__favorite.card-product__favorite_active
+                                            .card-product__favorite-wrapper
+                                                i.material-icons-twotone.md-favorite
+                                        
+                                        a(href="./product-page.html").card-product__overlay.waves-effect.waves-light
+                                            img.card-product__image(src="/images/product.png" width="100%")
+
+                                        .card-product__content
+
+                                            .card-product__wrapper
+
+                                                a(href="./product-page.html").card-product__title «Черничное наслаждение» 880 гр
+
+                                            .card-product__footer
+
+                                                .card-product__price 990₽
+
+                                                button.card-product__btn-cart.waves-effect.waves-light В корзину
+
+            section.section.news
+
+                h2.title.title_h2 Новости
+
+                .news-swiper
+
+                    .news-swiper__prev.waves-effect.waves-light
+            
+                        i.material-icons-round.md-arrow_back_ios
+                    
+                    .news-swiper__next.waves-effect.waves-light
+
+                        i.material-icons-round.md-arrow_forward_ios
+
+                    .news-swiper__pagination
+
+                    .news-swiper__overlay
+
+                        .news-swiper__wrapper
+
+                            - for (let x = 0; x < 4; x++)
+
+                                .news-swiper__slide
+
+                                    figure.card-article
+
+                                        a(href="/article.html").card-article__overlay.waves-effect.waves-light
+
+                                            img.card-article__image(src="/images/news.jpg" width="100%").cart-article__image
+
+                                        .card-article__wrapper
+
+                                            .card-article__wrapper-top
+
+                                                h4.card-article__title Заказ пирогов и тортов через 
+
+                                                i.material-icons.md-more_vert
+
+                                            a(href="/article.html").card-article__link Подробнее
+
+                                        .card-article__reveal
+
+                                            .card-article__wrapper-top
+
+                                                h4.card-article__title Заказ пирогов и тортов через сайт
+
+                                                i.material-icons.md-close
+
+                                            .card-article__reveal-content
+                                                figcaption.
+                                                    Ароматные медовые коржи и нежный сметанный крем. Оформлен имбирным печеньем и леденцами. 
+                                                    Торт в красивой прозрачной упаковке  станет прекрасным подарком как для педагога, так и для вашего школьника.
+
+block append scripts
+    script(src="./js/home.js?" + date)

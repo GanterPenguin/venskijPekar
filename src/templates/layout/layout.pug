@@ -1,0 +1,19 @@
+include ../mixins/mixins.pug
+include ./variables.pug
+
+
+doctype html
+html.html(lang="ru")
+
+    head
+
+        include head.pug
+
+    body.body
+
+        block layoutPage
+
+        noscript У вас отключен JavaScript, пожалуйста, включите его для корректной работы сайта.
+
+        block scripts
+            include scripts.pug
